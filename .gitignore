@@ -1,0 +1,17 @@
+# --- Hardware Simulation (Icarus Verilog / GTKWave) ---
+# Compiled simulation files
+*.vvp
+# Waveform data (Can be very large)
+*.vcd
+# Tool logs
+*.log
+
+# --- IDE & System Files ---
+# VS Code configuration
+.vscode/
+# History and temporary editor files
+.history/
+# macOS specific system files
+.DS_Store
+# Windows specific system files
+Thumbs.db
