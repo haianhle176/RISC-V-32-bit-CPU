@@ -1,9 +1,10 @@
-module top(
-    input logic clk, rst_n,
+module top (
+    input clk,rst_n,
     output logic memwrite,
-    output logic [31:0] adr, writedata
+    output logic [31:0] dataadr,writedata
 );
-    logic [31:0] instr;
-    cpu cpu_inst(.clk(clk),.rst_n(rst_n),.instr_t(instr),.adr(adr),.writedata(writedata),.memwrite(memwrite));
-    memory mem(.clk(clk),.adr(adr),.writedata(writedata),.memwrite(memwrite),.dataout(instr));
+    logic [31:0] pc,instr,readdata;
+    cpu cpu (clk,rst_n,pc,instr,memwrite,dataadr,writedata,readdata);
+    imem imem (pc,instr);
+    dmem dmem (clk,memwrite,dataadr,writedata,readdata);
 endmodule
