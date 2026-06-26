@@ -1,7 +1,6 @@
 # RISC-V 32-bit CPU Implementation (RV32I)
 
-This repository contains a from-scratch implementation of a **32-bit RISC-V CPU** using **SystemVerilog**. The project demonstrates the evolution of processor architecture, featuring both foundational and advanced design approaches.
-
+This repository contains a from-scratch implementation of a **32-bit RISC-V CPU** using **SystemVerilog**.
 ## 🚀 Architectures Supported
 
 I have implemented two distinct versions of the RISC-V core:
